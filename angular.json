@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-guide": {
+    "project-shopping": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-guide",
+            "outputPath": "dist/project-shopping",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,11 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap-4.0.0/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/bootstrap-4.0.0/dist/css/bootstrap.min.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -66,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-guide:build"
+            "browserTarget": "project-shopping:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-guide:build:production"
+              "browserTarget": "project-shopping:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-guide:build"
+            "browserTarget": "project-shopping:build"
           }
         },
         "test": {
@@ -114,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-guide:serve"
+            "devServerTarget": "project-shopping:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-guide:serve:production"
+              "devServerTarget": "project-shopping:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-guide"
+  "defaultProject": "project-shopping"
 }
