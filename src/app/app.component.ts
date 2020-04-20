@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project-shopping';
-  loadedFeature = 'recipe';
-
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
-
+  numbers = [1, 2, 3, 4, 5];
+  oddNumbers = [1, 3, 5];
+  eventNumbers = [2, 4]
+  onlyOdd = false;
+  value = 50;
 }
